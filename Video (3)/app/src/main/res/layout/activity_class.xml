@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.neu.video.ClassActivity"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入要搜索的内容"
+            android:layout_centerHorizontal="true" />
+        <ImageButton
+            android:id="@+id/b_search"
+            android:background="@drawable/search"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_margin="8dp"
+            android:onClick="search"/>
+    </LinearLayout>
+
+
+    <HorizontalScrollView
+        android:id="@+id/sv_btn_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_search"
+        android:scrollbars="none"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/shape_10dp_corners"
+                android:text="喜剧"
+                android:onClick="type1"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/shape_10dp_corners"
+                android:text="动作"
+                android:onClick="type2"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/shape_10dp_corners"
+                android:text="爱情"
+                android:onClick="type3"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/shape_10dp_corners"
+                android:text="奇幻"
+                android:onClick="type4"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/shape_10dp_corners"
+
+                android:text="动画"
+                android:onClick="type5"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/shape_10dp_corners"
+                android:text="历史"
+                android:onClick="type6"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/sv_video_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sv_btn_class">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <GridView
+                android:id="@+id/gv_video"
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:layout_gravity="left|bottom"
+                android:columnWidth="90dp"
+                android:layout_below="@+id/ll_title"
+                android:layout_marginTop="14dp"
+                android:fadeScrollbars="true"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="11dp"
+                android:scrollbars="none"
+                android:numColumns="3"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:stretchMode="columnWidth" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_btn_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:background="#fff"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/b_index"
+                android:background="@drawable/home"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:onClick="toIndex"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:background="#fff"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/b_class"
+                android:background="@drawable/in_class"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:onClick="toClass"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:background="#fff"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/b_regist"
+                android:background="@drawable/person"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:onClick="toPersonal"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+

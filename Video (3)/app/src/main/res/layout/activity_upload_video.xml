@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.neu.video.UploadVideoActivity"
+    android:focusableInTouchMode="true">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/sv_video_list"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ll_search">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/ib_vurl"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/up"
+                android:onClick="chooseVideo" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上传电影"
+                android:textSize="15dp"
+                android:layout_toRightOf="@+id/ib_vurl"
+                android:layout_alignBottom="@+id/ib_vurl" />
+            <ImageButton
+                android:id="@+id/ib_vimg"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/ib_vurl"
+                android:background="@drawable/up"
+                android:onClick="chooseImg"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上传电影封面"
+                android:textSize="15dp"
+                android:layout_toRightOf="@+id/ib_vimg"
+                android:layout_alignBottom="@+id/ib_vimg"/>
+            <EditText
+                android:id="@+id/et_vname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入电影名"
+                android:layout_below="@id/ib_vimg"
+                android:layout_centerHorizontal="true" />
+            <EditText
+                android:id="@+id/et_vdesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入电影简介"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/et_vname"
+                android:minLines="4"
+                android:gravity="top"/>
+            <EditText
+                android:id="@+id/et_vtime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入上映时间"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/et_vdesc"/>
+            <EditText
+                android:id="@+id/et_vdirector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入导演名"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/et_vtime"/>
+            <EditText
+                android:id="@+id/et_vactor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入演员名"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/et_vdirector"/>
+            <EditText
+                android:id="@+id/et_vtype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入类型id"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/et_vactor"/>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="上传"
+        android:onClick="uploadVideo"/>
+
+</RelativeLayout>

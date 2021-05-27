@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.neu.video.ChangePersonalActivity"
+    android:focusableInTouchMode="true">
+
+    <!--顶层图片-->
+    <ImageView
+        android:id="@+id/change_logo"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/change_logo"/>
+    <!--back按钮-->
+    <ImageView
+        android:id="@+id/bt_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/uback"
+        android:layout_marginTop="10dp"
+        android:onClick="toPersonal"/>
+    <!--<Button
+        android:id="@+id/bt_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回个人主页"
+        android:onClick="toPersonal"/>-->
+    <!--当前登陆用户头像-->
+    <ImageView
+        android:id="@+id/user_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/change_logo"
+        android:layout_marginTop="10dp"/>
+    <LinearLayout
+        android:id="@+id/ll_change_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/user_image">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  账号  "
+            android:textSize="18dp"/>
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:hint="请输入账号"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_msg_name"
+        android:layout_below="@id/ll_change_name"
+        android:text=""
+        android:textSize="12dp"
+        android:layout_marginLeft="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/rg_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_msg_name"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  性别  "
+            android:textSize="18dp"/>
+        <RadioButton
+            android:id="@+id/rb_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="男"/>
+        <RadioButton
+            android:id="@+id/rb_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ll_change_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/rg_sex">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  年龄  "
+            android:textSize="18dp"/>
+        <EditText
+            android:id="@+id/et_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:hint="请输入年龄"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_msg_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_change_age"
+        android:layout_marginLeft="60dp"
+        android:text=""
+        android:textSize="12dp"
+        />
+    <LinearLayout
+        android:id="@+id/ll_change_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_msg_age">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  手机号  "
+            android:textSize="14dp"/>
+        <EditText
+            android:id="@+id/et_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:hint="请输入手机号"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_msg_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_change_tel"
+        android:layout_marginLeft="60dp"
+        android:text=""
+        android:textSize="12dp"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll_change_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_msg_tel"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  头像  "
+            android:textSize="18dp"/>
+        <Button
+            android:id="@+id/bt_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="选择图片"
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            android:onClick="choosePic"
+            android:background="@drawable/login_button2"/>
+    </LinearLayout>
+    <!--上传头像组件-->
+    <!--图片显示区域 与原来头像位置重合-->
+    <LinearLayout
+        android:id="@+id/ll_showArea"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/change_logo"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/imageview"
+            android:scaleType="fitXY"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_update"
+        android:text="确定修改"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:background="@drawable/login_button2"
+        android:layout_marginLeft="5dp"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/ll_change_photo"
+        android:onClick="update"
+        />
+</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "neu.com.video"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    compile 'fm.jiecao:jiecaovideoplayer:5.5.2'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.0.0-beta1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+    //导入okhttp3依赖
+    implementation 'com.squareup.okhttp3:okhttp:4.4.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    //导入GSON转换包
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    implementation 'com.google.code.gson:gson:2.7'
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation files('libs/glide-full-4.7.0.jar')
+
+    // required
+    implementation 'org.salient.artvideoplayer:artplayer-java:0.6.0'
+
+    // Default control panel: optional
+    implementation 'org.salient.artvideoplayer:artplayer-ui:0.6.0'
+
+    //ijkPlayer: optional
+    implementation 'org.salient.artvideoplayer:artplayer-ijk:0.6.0'
+    implementation "org.salient.artvideoplayer:artplayer-armv7a:0.6.0"
+
+    //Other ABIs: optional
+    implementation "org.salient.artvideoplayer:artplayer-armv5:0.6.0"
+    implementation "org.salient.artvideoplayer:artplayer-x86:0.6.0"
+    // Other ABIs: optional (minSdk version >= 21)
+//    implementation "org.salient.artvideoplayer:artplayer-arm64:0.6.0"
+//    implementation "org.salient.artvideoplayer:artplayer-x86_64:0.6.0"
+
+    //ExoPlayer2 : optional
+    implementation "org.salient.artvideoplayer:artplayer-exo:0.6.0"
+
+    compile 'com.alibaba:fastjson:1.2.37'
+
+
+   // implementation 'com.github.bumptech.glide:glide:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+    implementation 'org.parceler:parceler-api:1.1.11'
+    annotationProcessor 'org.parceler:parceler:1.1.11'
+
+}

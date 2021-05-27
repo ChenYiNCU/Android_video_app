@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.neu.video.UserListActivity">
+
+    <ImageButton
+        android:id="@+id/b_login"
+        android:background="@drawable/in_home"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:onClick="toLogin"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/b_login">
+        <ListView
+            android:id="@+id/lv_user"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"></ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/b_user"
+            android:text="管理用户"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="toMuser"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:background="@drawable/login_button2"/>
+        <Button
+            android:id="@+id/b_class"
+            android:text="管理电影"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="toMvideo"
+            android:textColor="@color/colorAccent"
+            android:textSize="16dp"
+            android:background="@drawable/login_button"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+

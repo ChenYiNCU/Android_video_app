@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_vImg"
+        android:layout_width="220dp"
+        android:layout_height="140dp"
+        android:background="@drawable/bg"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/iv_vId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电影id"/>
+        <TextView
+            android:id="@+id/iv_vName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电影名"/>
+        <TextView
+            android:id="@+id/iv_vTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上映时间"/>
+        <TextView
+            android:id="@+id/iv_vDirector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="导演"/>
+        <TextView
+            android:id="@+id/iv_vActor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="演员"/>
+    </LinearLayout>
+
+</LinearLayout>

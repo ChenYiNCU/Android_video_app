@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.neu.video.LoginActivity"
+    android:focusableInTouchMode="true">
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/login_logo1"/>
+   <!-- <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="登入页面"
+        android:textSize="30dp"
+        android:layout_marginTop="15dp"
+        />-->
+    <LinearLayout
+        android:id="@+id/ll_login_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/login_logo">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  账号  "
+            android:textSize="18dp"/>
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:hint="请输入用户名"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_msg_name"
+        android:layout_below="@id/ll_login_name"
+        android:text=""
+        android:layout_marginLeft="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"/>
+   <LinearLayout
+       android:id="@+id/ll_login_pwd"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+       android:orientation="horizontal"
+       android:layout_below="@id/tv_msg_name">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="  密码  "
+           android:textSize="18dp"/>
+       <EditText
+           android:id="@+id/et_pwd"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="10dp"
+           android:hint="请输入密码"/>
+   </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_msg_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_login_pwd"
+        android:layout_marginLeft="60dp"
+        android:text=""
+        android:textSize="12dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg_who"
+        android:layout_below="@+id/tv_msg_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="5dp">
+
+        <RadioButton
+            android:id="@+id/rb_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户"
+            android:textColor="@color/dimgrey"/>
+        <RadioButton
+            android:id="@+id/rb_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="管理员"
+            android:textColor="@color/dimgrey" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ll_btn_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/rg_who"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
+
+        <Button
+            android:id="@+id/b_login"
+            android:text="注册"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:onClick="toRegist"
+            android:background="@drawable/login_button"
+            android:textSize="16dp"
+            android:textColor="@color/colorAccent"/>
+        <Button
+            android:id="@+id/b_regist"
+            android:text="登陆"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/login_button2"
+            android:layout_marginLeft="5dp"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:onClick="login"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

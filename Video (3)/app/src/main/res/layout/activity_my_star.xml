@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.neu.video.MyStarActivity"
+    android:focusableInTouchMode="true">
+    <TextView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/star3"
+        android:textSize="20dp"
+        android:text="我的收藏"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="18dp"
+        android:background="@color/lightgrey"/>
+    <TextView
+        android:id="@+id/nostar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+
+        android:text="未收藏任何电影"/>
+
+    <ListView
+        android:id="@+id/lv_video"
+        android:layout_width="match_parent"
+        android:layout_height="560dp"></ListView>
+
+</LinearLayout>
